@@ -7,3 +7,12 @@ def decode_char(str)
   }
   result[str]
 end
+
+def decode_word(word)
+	array = word.split(/ /)
+	word = ''
+	array.each { |char| 
+		word = "#{word}#{decode_char(char)}"
+	}
+	word
+end
