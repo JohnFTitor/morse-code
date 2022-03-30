@@ -9,19 +9,22 @@ def decode_char(str)
 end
 
 def decode_word(word)
-	array = word.split(/ /)
-	word = ''
-	array.each { |char|
-		word = "#{word}#{decode_char(char)}"
-	}
-	word
+  array = word.split(/ /)
+  word = ''
+  array.each do |char|
+    word = "#{word}#{decode_char(char)}"
+  end
+  word
 end
 
 def decode_message(msg_coded)
-    array = msg_coded.split(/   /)
-    msg = ''
-    array.each { |word|
-      msg = "#{msg}  #{decode_word(word)}"
-    }
-    msg
-end   
+  array = msg_coded.split(/   /)
+  msg = ''
+  array.each do |word|
+    msg = "#{msg} #{decode_word(word)}"
+  end
+  msg
+end
+
+puts decode_message('-- -.--   -. .- -- .')
+puts decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
