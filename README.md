@@ -25,6 +25,11 @@ $ git clone git@github.com:JohnFTitor/morse-code.git
 $ cd morse-code
 
 $ bundle install
+
+```
+### To run the code
+```bash
+$ ruby morse_decode.rb
 ```
 
 ## Authors
