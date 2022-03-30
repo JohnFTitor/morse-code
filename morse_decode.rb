@@ -11,8 +11,17 @@ end
 def decode_word(word)
 	array = word.split(/ /)
 	word = ''
-	array.each { |char| 
+	array.each { |char|
 		word = "#{word}#{decode_char(char)}"
 	}
 	word
 end
+
+def decode_message(msg_coded)
+    array = msg_coded.split(/   /)
+    msg = ''
+    array.each { |word|
+      msg = "#{msg}  #{decode_word(word)}"
+    }
+    msg
+end   
